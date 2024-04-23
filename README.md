@@ -47,7 +47,15 @@ This folder is organized by 4 more specific folders, and each will be described 
 	- `league_dim.ktr`
 	- `team_dim.ktr`
 	- `match_goals_fact.ktr`
-
+---
+### Clear data warehouse
+```
+DELETE FROM match_goals_fact;
+DELETE FROM team_dim;
+DELETE FROM league_dim;
+DELETE FROM season_dim;
+DELETE FROM month_dim;
+```
 ---
 
 ### Validation of Result
