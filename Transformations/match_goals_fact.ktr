@@ -441,13 +441,21 @@
     <type>MARIADB</type>
     <access>Native</access>
     <database>soccer_dwh</database>
-    <port>3306</port>
+    <port>3307</port>
     <username>root</username>
-    <password>Encrypted </password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10be96aacc</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MARIADB.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
         <attribute>N</attribute>
@@ -462,7 +470,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
+        <attribute>3307</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -489,16 +497,24 @@
   <connection>
     <name>soccer_mysql</name>
     <server>localhost</server>
-    <type>MARIADB</type>
+    <type>MYSQL</type>
     <access>Native</access>
     <database>soccer</database>
-    <port>3306</port>
+    <port>3308</port>
     <username>root</username>
-    <password>Encrypted </password>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce10be96aacc</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.defaultFetchSize</code>
+        <attribute>500</attribute>
+      </attribute>
+      <attribute>
+        <code>EXTRA_OPTION_MYSQL.useCursorFetch</code>
+        <attribute>true</attribute>
+      </attribute>
       <attribute>
         <code>FORCE_IDENTIFIERS_TO_LOWERCASE</code>
         <attribute>N</attribute>
@@ -513,7 +529,7 @@
       </attribute>
       <attribute>
         <code>PORT_NUMBER</code>
-        <attribute>3306</attribute>
+        <attribute>3308</attribute>
       </attribute>
       <attribute>
         <code>PRESERVE_RESERVED_WORD_CASE</code>
@@ -522,6 +538,10 @@
       <attribute>
         <code>QUOTE_ALL_FIELDS</code>
         <attribute>N</attribute>
+      </attribute>
+      <attribute>
+        <code>STREAM_RESULTS</code>
+        <attribute>Y</attribute>
       </attribute>
       <attribute>
         <code>SUPPORTS_BOOLEAN_DATA_TYPE</code>
@@ -818,6 +838,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1141,15 +1163,6 @@
         <name>possession</name>
       </remove>
       <remove>
-        <name>B365H</name>
-      </remove>
-      <remove>
-        <name>B365D</name>
-      </remove>
-      <remove>
-        <name>B365A</name>
-      </remove>
-      <remove>
         <name>BWH</name>
       </remove>
       <remove>
@@ -1402,6 +1415,18 @@
         <column_name>total_goal</column_name>
         <stream_name>total_goal</stream_name>
       </field>
+      <field>
+        <column_name>B365H</column_name>
+        <stream_name>B365H</stream_name>
+      </field>
+      <field>
+        <column_name>B365A</column_name>
+        <stream_name>B365A</stream_name>
+      </field>
+      <field>
+        <column_name>B365D</column_name>
+        <stream_name>B365D</stream_name>
+      </field>
     </fields>
     <attributes/>
     <cluster_schema/>
@@ -1549,6 +1574,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -1895,6 +1922,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2193,6 +2222,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2475,6 +2506,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>
@@ -2816,6 +2849,8 @@
     <execute_each_row>N</execute_each_row>
     <variables_active>N</variables_active>
     <lazy_conversion_active>N</lazy_conversion_active>
+    <cached_row_meta_active>N</cached_row_meta_active>
+    <row-meta/>
     <attributes/>
     <cluster_schema/>
     <remotesteps>

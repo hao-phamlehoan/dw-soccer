@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  dw-mysql:
+    image: mysql:8.3.0
+    environment:
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_DATABASE: soccer
+    volumes:
+      - ./Data/soccer:/docker-entrypoint-initdb.d/:ro
+    ports:
+      - "3308:3306"
+    networks:
+      - dw-network
+
+  dw-mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: dev
+      MYSQL_DATABASE: soccer_dwh
+    volumes:
+      - ./Transformations/Script:/docker-entrypoint-initdb.d/:ro
+    ports:
+      - "3307:3306"
+    networks:
+      - dw-network
+
+networks:
+  dw-network:
+    driver: bridge
